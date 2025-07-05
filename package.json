@@ -1,0 +1,13 @@
+{
+  "name": "lifeinweeks",
+  "version": "1.0.0",
+  "description": "Life in weeks visualization",
+  "scripts": {
+    "build": "esbuild --format=esm --external:react --external:react-dom weeks_of_life_app.tsx --bundle --outfile=docs/app.js --minify",
+    "start": "serve docs -l 3000"
+  },
+  "devDependencies": {
+    "esbuild": "^0.21.0",
+    "serve": "^14.2.0"
+  }
+}
