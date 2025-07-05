@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import ReactDOM from 'react-dom';
 
 export default function WeeksOfLife() {
   const [step, setStep] = useState(1);
@@ -293,4 +294,12 @@ export default function WeeksOfLife() {
       </div>
     </div>
   );
+}
+
+// Automatically mount when loaded in a browser
+if (typeof document !== 'undefined') {
+  const root = document.getElementById('root');
+  if (root) {
+    ReactDOM.render(<WeeksOfLife />, root);
+  }
 }
